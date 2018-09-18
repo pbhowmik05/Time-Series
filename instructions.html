@@ -1,0 +1,165 @@
+
+<!-- saved from url=(0066)http://csce.uark.edu/~mgashler/ml/2018_spring/a3/instructions.html -->
+<html class="gr__csce_uark_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<style>
+		body {
+			background-color: #203050;
+			background-image:url('../black_fade.png');
+			background-repeat:repeat-x;
+		}
+		.code {
+			margin-left: 30px;
+			color:#000000;
+			background-color:#ffffff;
+		}
+	</style>
+</head>
+<body bgcolor="#d0d0b0" data-gr-c-s-loaded="true"><br><br>
+<table align="center" cellpadding="50" border="1" bgcolor="#e0e0c0" width="720"><tbody><tr><td>
+
+<h1>Using Neural Nets</h1>
+
+<p>Instructions:</p>
+<ol>
+	<li>Write some code to detect convergence with your neural network.
+		Divide the training data into two portions, called "training" and "validation".
+		Train using only the samples in the training portion of the data in random order without visiting any of them twice.
+		After every k epochs of training, measure the sum-squared-error against the validation portion of the data.
+		If the error does not improve by at least j percent over a window of k training epochs, then convergence is detected and training is done.
+		You should be able to adjust the values of j and k to your liking.
+		</li><br><br>
+
+	<li>Add support for batch and mini-batch gradient descent training.
+		That is, update the gradient with all of the patterns in the mini-batch before applying it to the weights.
+		</li><br><br>
+
+	<li>Add support for momentum to your neural network.
+		That is, before you call updateGradient, instead of filling the gradient vector with zeros, just scale it by the momentum term.
+		Use the equation, "m<sup>0</sup>+m<sup>1</sup>+m<sup>2</sup>+m<sup>3</sup>... = 1/(1-m)" to compute an "effective mini-batch size",
+		and provide a mechanism for users to set the momentum term based on the desired effective mini-batch size.
+		</li><br><br>
+
+	<li>Download this code for <a href="http://csce.uark.edu/~mgashler/ml/2018_spring/a3/preprocess_cpp.zip">C++</a> or <a href="http://csce.uark.edu/~mgashler/ml/2018_spring/a3/preprocess_java.zip">Java</a>.
+		It provides implementations of a few different operations for preprocessing data.
+		Study the code until you understand it (or ask questions).
+		</li><br><br>
+
+	<li>Train your neural network using this data: <a href="http://csce.uark.edu/~mgashler/ml/2018_spring/a3/hypothyroid.arff">hypothyroid.arff</a>.
+		</li><br><br>
+
+	<li>Next, let's explore the concept of overfit.
+		Measure root-mean-squared-error against both training and validation data at regular intervals during training.
+		Make a line plot (with two curves) showing the progress of your neural network over time.
+		<b>Be sure to label both axes and both curves on your chart!</b>
+		The horizontal axis should be the number of training pattern presentations.
+		The vertical axis should be RMSE.
+		The accuracy with training data should steadily improve.
+		The accuracy with the validation data should improve at first, then get slightly worse as the neural network begins to overfit the training portion.
+		(Note where convergence is detected on your chart, but Keep training for several more epochs to make the chart more interesting.)
+		<br><br>
+		For an example of approximately what this chart is supposed to look like, see Section 4.3.6.2 in the book.
+		(Since this is a different dataset, however, it will probably have somewhat different properties.)
+		<br><br>
+		<h3>Some ways to make a chart</h3>
+		<b>If you prefer to <a href="http://xkcd.com/974/">just pass the salt</a>:</b>
+			<ol>
+				<li>Insert some print statements into your code to output some comma-separated values.</li>
+				<li>Run your program, and pipe the output to a file.</li>
+				<li>Import this data into your favorite spreadsheet program.</li>
+				<li>Manually use the GUI interface of your spreadsheet program to generate a chart.</li>
+				<li>Take a screen shot.</li>
+				<li>Reopen it in your favorite painting program.</li>
+				<li>Manually label the axes and the curves.</li>
+			</ol>
+		<br>
+		<b>If you prefer fully-automated general solutions:</b>
+			<ol>
+				<li>Write a class for generating SVG output, or link to some existing library that does it.
+					Here is a simple C++ class I wrote for generating SVG output: <a href="http://csce.uark.edu/~mgashler/ml/2018_spring/a3/svg.h">svg.h</a>, <a href="http://csce.uark.edu/~mgashler/ml/2018_spring/a3/svg.cpp">svg.cpp</a>.
+					Sorry, I have not yet translated this to Java, but you are welcome to do that if you want to.</li>
+				<li>Write your code to generate an SVG chart. (Here is an example snip of code for using my SVG class, and the plot it generates.)
+<pre class="code">GSVG svg(500, 500, 0, 0, 100, 100);
+svg.horizMarks(10);
+svg.vertMarks(10);
+svg.line(20, 40, 50, 50, 1, 0x008000);
+svg.dot(20, 40, 1, 0x000080);
+svg.text(20, 40, "begin");
+svg.dot(50, 50, 1, 0x000080);
+svg.text(50, 50, "end");
+svg.rect(6, 0, 3, 27, 0x008080);
+std::ofstream s;
+s.exceptions(std::ios::badbit);
+s.open("myplot.svg", std::ios::binary);
+svg.print(s);
+</pre><br>
+	<img src="./instructions_files/myplot.svg"><br>
+				(Note that SVG images are just text files.
+				You can see the source of this image by right-clicking on it-&gt;View Image-&gt;View Page Source.)
+				</li><li>If you don't want to write code to label the axes or curves, you can manually open the SVG file in Inkscape (or your favorite SVG editor) to touch it up.</li>
+			</ol>
+			<br><b>Warning:</b> If you use SVG format, make sure to plot a line-segment every <i>n</i> iterations, where <i>n&gt;1</i>, or else your plot file may become humongous!
+		</li><br><br>
+
+	<li>Let's also compare momentum against minibatches.
+		Train again with the same data.
+		This time, put wall-clock time (rather than training epochs) on the horizontal axis.
+		The vertical axis should still be RMSE.
+		Train using momentum. (You may pick the momentum term.)
+		Also train using minibatches. (You may select the minibatch size.)
+		Make a second chart.
+		</li><br><br>
+		
+	<li>Zip (or tar) up your code. Include the two charts you made in the archive, and submit it in the usual manner.
+		</li><br><br>
+</ol>
+
+<h3>F.A.Q.</h3>
+<ol>
+	<li><b>How does one do an epoch of training?</b>
+		One "epoch" of training involves presenting each training pattern in random order.
+		A good way to do this is to generate
+		a list of training pattern row indexes,
+<pre class="code">m_pIndexes = new size_t[train_features.rows()];
+size_t* pInd = m_pIndexes;
+for(size_t i = 0; i &lt; length; i++)
+	*(pInd++) = i;
+</pre>
+		and shuffle it at the start of each training epoch:
+<pre class="code">for(size_t i = train_features.rows(); i &gt; 1; i--)
+	std::swap(m_pIndexes[i - 1], m_pIndexes[m_rand.next(i)]);
+</pre>
+	</li><br><br>
+
+	<li><b>How does one measure time?</b>
+		Here's a C++ function that returns the number of seconds since some event with at least milisecond precision:
+<pre class="code">#ifdef WINDOWS
+#	include &lt;windows.h&gt;
+#else
+#	include &lt;sys/time.h&gt;
+#endif
+
+double seconds()
+{
+#ifdef WINDOWS
+	return (double)GetTickCount() * 1e-3;
+#else
+	struct timeval tp;
+	gettimeofday(&amp;tp, NULL);
+	return ((double)tp.tv_sec + (double)tp.tv_usec * 1e-6);
+#endif
+}
+</pre>
+		In Java, you can do:
+<pre class="code">double seconds = (double)System.nanotime() * 1e9;
+</pre>
+		</li><br><br>
+
+	<li><b>My SVG lines exhibit streakey spikes that extend outward from the points I connected. Why?</b>
+		I think this is an artifact of how Firefox renders SVG files.
+		If it makes your graph difficult to read, try plotting at less-frequent intervals.
+		</li><br><br>
+</ol>
+
+</td></tr></tbody></table>
+
+</body></html>

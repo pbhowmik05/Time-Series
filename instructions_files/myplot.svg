@@ -1,0 +1,64 @@
+<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="500" height="500">
+
+
+<defs><clipPath id="chart0-0"><rect x="0.000000" y="0.000000" width="100.000000" height="100.000000" /></clipPath></defs>
+<g transform="translate(50.000000 450.000000) scale(4.500000 -4.500000) translate(-0.000000 -0.000000)">
+
+<!-- Horiz labels -->
+<line x1="0.000000" y1="0.000000" x2="0.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="3.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 3.000000 1.000000)" text-anchor="end">0</text>
+<line x1="10.000000" y1="0.000000" x2="10.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="48.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 48.000000 1.000000)" text-anchor="end">10</text>
+<line x1="20.000000" y1="0.000000" x2="20.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="93.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 93.000000 1.000000)" text-anchor="end">20</text>
+<line x1="30.000000" y1="0.000000" x2="30.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="138.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 138.000000 1.000000)" text-anchor="end">30</text>
+<line x1="40.000000" y1="0.000000" x2="40.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="183.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 183.000000 1.000000)" text-anchor="end">40</text>
+<line x1="50.000000" y1="0.000000" x2="50.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="228.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 228.000000 1.000000)" text-anchor="end">50</text>
+<line x1="60.000000" y1="0.000000" x2="60.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="273.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 273.000000 1.000000)" text-anchor="end">60</text>
+<line x1="70.000000" y1="0.000000" x2="70.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="318.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 318.000000 1.000000)" text-anchor="end">70</text>
+<line x1="80.000000" y1="0.000000" x2="80.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="363.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 363.000000 1.000000)" text-anchor="end">80</text>
+<line x1="90.000000" y1="0.000000" x2="90.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="408.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 408.000000 1.000000)" text-anchor="end">90</text>
+<line x1="100.000000" y1="0.000000" x2="100.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="453.000000" y="1.000000" style="fill:#000000" transform="scale(0.222222 -0.222222) rotate(-90.000000 453.000000 1.000000)" text-anchor="end">100</text>
+
+
+<!-- Vert labels -->
+<line x1="0.000000" y1="0.000000" x2="100.000000" y2="0.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="3.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">0</text>
+<line x1="0.000000" y1="10.000000" x2="100.000000" y2="10.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-42.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">10</text>
+<line x1="0.000000" y1="20.000000" x2="100.000000" y2="20.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-87.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">20</text>
+<line x1="0.000000" y1="30.000000" x2="100.000000" y2="30.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-132.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">30</text>
+<line x1="0.000000" y1="40.000000" x2="100.000000" y2="40.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-177.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">40</text>
+<line x1="0.000000" y1="50.000000" x2="100.000000" y2="50.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-222.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">50</text>
+<line x1="0.000000" y1="60.000000" x2="100.000000" y2="60.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-267.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">60</text>
+<line x1="0.000000" y1="70.000000" x2="100.000000" y2="70.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-312.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">70</text>
+<line x1="0.000000" y1="80.000000" x2="100.000000" y2="80.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-357.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">80</text>
+<line x1="0.000000" y1="90.000000" x2="100.000000" y2="90.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-402.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">90</text>
+<line x1="0.000000" y1="100.000000" x2="100.000000" y2="100.000000" style="stroke:#a0a0a0;stroke-width:0.044444"/>
+<text x="-1.000000" y="-447.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)" text-anchor="end">100</text>
+
+<line x1="20.000000" y1="40.000000" x2="50.000000" y2="50.000000" style="stroke:#008000;stroke-width:0.281091"/>
+<ellipse cx="20.000000" cy="40.000000" rx="0.888889" ry="0.888889" fill="#000080" />
+<text x="90.000000" y="-180.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)">begin</text>
+<ellipse cx="50.000000" cy="50.000000" rx="0.888889" ry="0.888889" fill="#000080" />
+<text x="225.000000" y="-225.000000" style="fill:#000000" transform="scale(0.222222 -0.222222)">end</text>
+<rect x="6.000000" y="0.000000" width="3.000000" height="27.000000" style="fill:#008080"/>
+</g>
+
+</svg>
